@@ -1,11 +1,45 @@
 h1, h2, h3, h4, h5{
-  color: pink;
+  color: rgb(172, 68, 172);
 }
 
+h2{
+  text-align: center;
+}
+
+#main-header{
+  width: 2000x;
+  height: 190px;
+  background-image: url("/JSForWebDev/Tasks/Task2/Uppgift1/Images/headerimg.jpg");
+  padding: 20px;
+}
 p{
   color: gray;
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.5;
+}
+.article-p{
+  color: antiquewhite
+  ;
+}
+#learn-more{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: rgb(70, 17, 70);
+  padding: 20px;
+
+}
+
+#section-header{
+  padding-bottom: 15px;
+  text-align: center;  
+}
+
+#learn-more-line{
+  width: 250px;
+}
+
+.learn-more-header{
+  color:antiquewhite;
 }
 
 #article-boxes{
@@ -17,7 +51,29 @@ p{
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  border: 1px solid black;
+  border: 10px solid plum;
   width: 500px;
   padding: 20px;
+}
+
+[href]{
+  color: plum;
+}
+
+li::marker{
+  color:plum
+}
+
+#bottom-footer{
+  margin-top: 40px;
+  background-color: plum;
+  padding: 10px;
+  [href]{
+    color: aliceblue;
+  }
+
+
+.article-footer{
+  background-color: yellow;
+
 }

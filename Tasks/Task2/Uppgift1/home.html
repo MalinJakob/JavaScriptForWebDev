@@ -19,7 +19,7 @@
     <!-- start of header of the page, with navigation bar-->
 
     
-    <header>
+    <header id="main-header">
       <h1 id="top"> Welcome to my page - <i>Home of Malin Jakob</i></h1>
       <!--start of navigation bar-->
       <nav>
@@ -92,36 +92,40 @@
       <!-- end of article 2, Latest News -->
 
       <!-- more information about additional information -->
-      <section>
-        <header>
-          <h2>Learn More</h2>
-        </header>
-        <article>
-          <header>
-            <h3>Cognitive Science, what is that?</h3>
-            <p>
-              If you never heard of Cognitive Science,<br />
-              here is a link to a great definition.
-            </p>
+      <div id="learn-more">
+        <section>
+          <header id="section-header">
+            <h2 class="learn-more-header">Learn More</h2>
+            <hr id="learn-more-line">
           </header>
-          <a href="https://cogsci.jhu.edu/about/" target="_blank">
-            <img
-              src="Images/johnCS.png"
-              alt="an image of the articles first page"
-              width="350"
-              height="255"
-            />
-          </a>
-          <footer>
-            <p>
-              <cite
-                >John Hopkins Krieger School of Arts & Sciences, Department of
-                Cognitive Science</cite
-              ><br />
-              Reference taken
-              <time datetime="2024-08-08">September 8, 2024</time>
-            </p>
-          </footer>
+          <article>
+            <header>
+              <h3 class="learn-more-header">Cognitive Science, what is that?</h3>
+              <p class="article-p">
+                If you never heard of Cognitive Science,<br />
+                here is a link to a great definition.
+              </p>
+            </header>
+            <a href="https://cogsci.jhu.edu/about/" target="_blank">
+              <img
+                src="Images/johnCS.png"
+                alt="an image of the articles first page"
+                width="350"
+                height="255"
+              />
+            </a>
+        
+            <footer class="article-footer">
+              <p class="article-p">
+                <cite
+                  >John Hopkins Krieger School of Arts & Sciences, Department of
+                  Cognitive Science</cite
+                ><br />
+                Reference taken
+                <time datetime="2024-08-08">September 8, 2024</time>
+              </p>
+            </footer>
+        </div>
 
           <!-- side part for interesting articles -->
           <aside>
@@ -147,7 +151,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer id="bottom-footer">
       <!-- contact information -->
       <section>
         <h4>Contact</h4>
