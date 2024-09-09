@@ -6,21 +6,27 @@ h2{
   text-align: center;
 }
 
+body{
+  margin: 0; 
+  height: 100vh;
+  position: relative; 
+}
 #main-header{
   width: 2000x;
   height: 190px;
   background-image: url("/JSForWebDev/Tasks/Task2/Uppgift1/Images/headerimg.jpg");
   padding: 20px;
 }
+
 p{
   color: gray;
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.5;
 }
 .article-p{
-  color: antiquewhite
-  ;
+  color: antiquewhite;
 }
+
 #learn-more{
   margin-top: 40px;
   margin-bottom: 40px;
@@ -70,10 +76,24 @@ li::marker{
   padding: 10px;
   [href]{
     color: aliceblue;
-  }
+  }}
 
-
-.article-footer{
-  background-color: yellow;
-
+.learn-more-boxes{
+  height: 400px;
+  width: 100%;
+  border: 2px solid antiquewhite;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+  text-align: auto;
 }
+
+.image-content{
+  width: 350px;
+}
+
+
+
+
