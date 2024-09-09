@@ -1,0 +1,33 @@
+.paragraph{
+  color: rgb(78, 80, 86);
+  background-color: pink;
+  height: 50px;
+}
+
+h2{
+  border: 1px solid green;
+}
+#background-section{
+  width: 40%;
+  border: 1px solid black;
+  text-align: center;
+  letter-spacing: 12px;
+  font-size: 14px;
+}
+#background-section p{
+  height:auto ;
+}
+
+#colors-paragraph{
+  text-decoration: underline;
+  font-family: 'Times New Roman', Times, serif
+  ;
+}
+
+#mylink{
+  text-decoration: none;
+}
+
+[target]{
+  color: orange; 
+}

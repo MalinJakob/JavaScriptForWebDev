@@ -1,0 +1,23 @@
+h1, h2, h3, h4, h5{
+  color: pink;
+}
+
+p{
+  color: gray;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.5;
+}
+
+#article-boxes{
+  display: flex;
+  justify-content: space-between;
+}
+
+.article{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid black;
+  width: 500px;
+  padding: 20px;
+}
