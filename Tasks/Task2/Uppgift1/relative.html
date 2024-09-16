@@ -15,6 +15,24 @@
       h3~div{
         background: yellow;
       }
+      ol[id]{
+        border: 2px solid red
+      }
+      li[class="reptile"]{
+        background: blueviolet;
+      }
+      li[class~="animal"]{
+        background: blue;
+      }
+      li[class|="cat"]{
+        background: greenyellow;
+      }
+      li[class^="top"]{
+        background: orange;
+      }
+      li[class$="ird"]{
+        background: rgb(187, 95, 95);
+      }
     </style>
   </head>
 
@@ -32,5 +50,15 @@
       <p>Para 2</p>
       <aside><p>Para 3</p></aside>
     </div>
+
+    <ol id="list">
+      <li class="reptile">Alligator</li>
+      <li class="dometsic animal">Dog</li>
+      <li class="animal wild">Tiger</li>
+      <li class="cat-family">Lion</li>
+      <li class="sea fish">Barracuda</li>
+      <li class="topcat">Cartoon</li>
+      <li class="domestic bird">Budgerigar</li>
+    </ol>
   </body>
 </html>
