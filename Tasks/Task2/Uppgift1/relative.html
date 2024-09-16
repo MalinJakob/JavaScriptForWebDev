@@ -6,6 +6,10 @@
     <meta name="application-name" content="Malins Webpage" />
     <meta name="author" content="Malin Jakob" />
     <style>
+      
+      *{
+        box-sizing: border-box;
+      }
       div p{
         color: aliceblue; background: blueviolet;
       }
@@ -50,11 +54,129 @@
         width: 200px;
       }
 
+      .table-style{
+        border-spacing: 30px 10px 
+      }
+      
+      
+      table{
+        table-layout: fixed;
+        caption-side: top; text-align: center; margin: 0 0 30px;
+        width: 800px;
+        height: 200px;
+        margin: 20px;
+      }
+      table{
+        border: 2px solid deeppink;
+      }
+
+      td.twin{
+        border: 5px double deeppink;
+      }
+      td.dots{
+        border: 5px dotted deeppink;
+      }
+      td.full{
+        border: 5px solid deeppink;
+      }
+
+      table{
+        border-collapse: ;
+      }
+
+      caption{
+        display: table-caption;
+        background-color: #e55f6f;
+        padding: 10px;
+        color: antiquewhite;
+      }
+
+      #list{
+        list-style-type: lower-greek ;
+      }
+      ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background: pink;
+        width: 150px;
+      }
+      li a{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+      }
+      li a.current{
+        background: hotpink;
+      }
+      li a:hover{
+        background: deeppink; color:antiquewhite;
+      }
+      h1{
+        border:2px dashed deeppink 
+      }
+      div.container{
+        position: relative;
+        display: inline-block;
+      }
+      div.active{
+        padding: 15px;
+        background: pink;
+      }
+      div.dropdown{
+        position:absolute; 
+        width: 100%;
+        border: 2px solid pink;
+        background: white;
+        z-index: 1;
+        display: none;
+      }
+      div.dropdown a{
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: black;
+      }
+      div.dropdown a:hover{
+        background: deeppink;
+        color: antiquewhite;
+      }
+      div.container:hover div.dropdown{
+        display: block;
+      }
+
     
     </style>
   </head>
 
+
   <body>
+    <header>
+      <h1 id="top">Me, right now - <i>Malin Jakob</i></h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="history.html">HISTORY</a></li>
+          <li><a href="now.html">NOW</a></li>
+          <li><a href="future.html">FUTURE</a></li>
+          <li><a href="relative.html" class="current">RELATIVE</a></li>
+          <!--end of navigation bar-->
+        </ul>
+      </nav>
+      <h1>Banner</h1>
+
+      <div class="container">
+        <div class="active">Dropdown Menu</div>
+        <div class="dropdown">
+          <a href="#option-1">Option 1</a>
+          <a href="option-2">Option 2</a>
+          <a href="option-3">Option 3</a>
+        </div> 
+      </div>
+      <p>Random text content: Remains below the dropdown menu.</p>
+    
     <h3>Heading</h3>
     <div>
       <ul>
@@ -105,5 +227,52 @@
       <li class="topcat">Cartoon</li>
       <li class="domestic bird">Budgerigar</li>
     </ol>
+
+    <article>
+      <header>
+        <h3>Hours Spent Studying</h3>
+      </header>
+      <table class="table-style">
+        <caption>
+          Hours Spent
+        </caption>
+        <colgroup>
+          <col span="1" style="background-color: #f4d0d4" />
+          <col span="6" style="background-color: #ffc0cb" />
+        </colgroup>
+        <tr>
+          <th></th>
+          <th scope="col">Monday</th>
+          <th scope="col">Tuesday</th>
+          <th scope="col">Wednesday</th>
+          <th scope="col">Thursday</th>
+          <th scope="col">Friday</th>
+        </tr>
+        <tr>
+          <th scope="row">Hours w.36</th>
+          <td class="twin">3</td>
+          <td class="dots">2</td>
+          <td class="full">4</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <th scope="row">Hours w.37</th>
+          <td>3</td>
+          <td>2</td>
+          <td>4</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <th scope="row">Total Hours</th>
+          <td>28</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </article>
   </body>
 </html>
