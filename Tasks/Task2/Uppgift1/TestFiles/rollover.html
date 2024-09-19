@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rollover Effect</title>
+    <style>
+    
+      div {
+        position: absolute;
+        bottom: 10px;
+        width: 150px;
+        height: 50px;
+      }
+      div#active {
+        left: 10px;
+      }
+      div#prints {
+        left: 170px;
+      }
+      div#active {
+        background: bisque;
+      }
+      div#prints {
+        background: url(DSC_0268_Original\\(kopia\).jpg) 0 0 bisque;
+      }
+
+      div#active:hover {
+        background-color: darkorange;
+      }
+      div#prints:hover {
+        background: url(DSC_0268_Original\ \(kopia\).jpg) 0 -50px darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- to create a rollover effect -->
+    <div id="active"></div>
+    <div id="prints"></div>
+  </body>
+</html>

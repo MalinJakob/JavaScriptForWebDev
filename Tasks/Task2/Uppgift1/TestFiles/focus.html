@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Effec <table></table></title>
+  <style>
+      input:focus {
+        background: darkorange;
+      }
+      a:focus {
+        background: orange;
+      }
+  </style>
+</head>
+<body>
+  <!-- to create a focus effect -->
+  <form action="echo.py">
+    <fieldset>
+      <legend>Send for details</legend>
+      <label for="addr">Enter your e-mail:</label>
+      <input id="addr" type="text" /><br />
+      <input type="submit" value="Send" />
+      <a href="http://samples">Samples Page</a>
+    </fieldset>
+  </form>
+</body>
+</html>

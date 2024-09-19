@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curved corners</title>
+    <style>
+      div.outer,
+      div.inner {
+        width: 120px;
+        height: 120px;
+      }
+      div.outer {
+        display: inline-block;
+        margin: 10px;
+        border: 5px solid darkorange;
+        background: bisque;
+      }
+      div.inner {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        border: 2px dashed orange;
+      }
+      div.all {
+        border-radius: 40px;
+      }
+      div.ind {
+        border-radius: 50px 0 50px 0;
+      }
+      div.cir {
+        border-radius: 65px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- to create curved corners or circle from a square  -->
+    <div class="squares">
+      <div class="outer all">
+        <div class="inner">All Rounded Corners</div>
+      </div>
+      <div class="outer ind">
+        <div class="inner">Individual Corners</div>
+      </div>
+      <div class="outer cir">
+        <div class="inner">Circle</div>
+      </div>
+    </div>
+  </body>
+</html>

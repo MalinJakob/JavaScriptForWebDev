@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <style>
+  div.thumbnail{
+  position: relative;
+  display: inline-block;
+}
+
+div.dropdown{
+  position: absolute;
+  padding: 2px;
+  border: 2px dashed darkorange;
+  background: white;
+  z-index: 1;
+  display: none;
+}
+
+div.thumbnail:hover div.dropdown{
+  display: block;
+}
+
+span.label{
+  display: block;
+  padding: 10px;
+  text-align: center;
+  background: darkorange; color: antiquewhite;
+}
+ </style>
+ <body>
+   <!-- to create reveal elements -->
+ <div class="thumbnail">
+  <img
+    src="DSC_0268_Original (kopia).jpg"
+    alt="walter"
+    width="35"
+    height="50 "
+  />
+  <div class="dropdown">
+    <img src="Images/Walter-Stor.jpg" alt="walter" width="135" height="190" />
+    <span class="label">Walter sitter och ler</span>
+</div>
+ </body>
+ </html>
+ 
+ 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+    <title>Push Buttons</title>
+    <style>
+      .button {
+  display: inline-block;
+  font: 16px sans-serif;
+  border: none;
+  padding: 16px 32px;
+  margin: 5px;
+  background: orange;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:link,
+.button:visited {
+  color: antiquewhite;
+}
+.button:hover {
+  background: coral;
+}
+.button:active {
+  background: orangered;
+}
+
+form {
+  display: inline-block;
+}
+    </style>
+  </head>
+  <body>
+    <!-- to create push buttons (rolloverffect) -->
+    <a class="button" href="target.html">Link Button</a>
+    <button class="button" onclick="alert(this.inner.Text + Clicked)">
+      Script Button
+    </button>
+    <form method="GET" action="http//:localhost/echo.py">
+      <input class="button" type="submit" name="CSS" value="Submit Button" />
+    </form>
+  </body>
+</html>
