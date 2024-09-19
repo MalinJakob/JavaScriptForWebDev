@@ -10,8 +10,35 @@
       background: darkorange;
     }
     a:focus{
-      background: orange;
+      background: or;
     }
+    div{
+      position: absolute;
+      bottom: 10px;
+      width: 150px; height: 50px;
+    }
+    div#active{
+      left: 10px;
+    }
+    div#prints{
+      left: 170px;
+    }
+    div#active{
+      background: bisque;
+    }
+    div#prints{
+      background: url(Images/DSC_0268_Original\ \(kopia\).jpg) 0 0 bisque;
+    }
+
+    div#active:hover{
+      background-color: darkorange
+      ;
+    }
+    div#prints:hover{
+      background: url(Images/DSC_0268_Original\ \(kopia\).jpg)0 -50px darkorange;
+    }
+
+
   </style>
 </head>
 <body>
@@ -24,5 +51,7 @@
       <a href="http://samples">Samples Page</a>
     </fieldset>
   </form>
+  <div id="active"></div>
+  <div id="prints"></div>
 </body>
 </html>
