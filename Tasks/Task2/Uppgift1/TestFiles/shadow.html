@@ -1,32 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=
-  , initial-scale=1.0">
-  <title>Cast Shadow</title>
-  <style>
-    div.outer, div.inner{
-  width: 120px;
-  height: 120px;
-}
-div.outer{
-  display: inline-block;
-  margin: 20px;
-  border: 2px solid black;
-  background: white;
-}
-  </style>
-</head>
-<body>
-  <div class="outer drop">
-    <div class="inner">HTML</div>
-  </div>
-  <div class="outer glow">
-    <div class="inner">CSS</div>
-  </div>
-  <div class="outer inset">
-    <div class="inner">JS</div>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+    <title>Cast Shadow</title>
+    <style>
+      div.outer,
+      div.inner {
+        width: 120px;
+        height: 120px;
+      }
+      div.outer {
+        display: inline-block;
+        margin: 20px;
+        border: 2px solid black;
+        background: white;
+      }
+      div.inner{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        font: bold 2em sans-serif;
+      }
+      div.drop{
+        box-shadow: 10px 10px 10px darkorange;
+
+      }
+      div.drop>div.inner{
+        text-shadow: 2px 2px darkorange;
+      }
+
+      div.glow{
+        box-shadow: 0 0 10px darkorange;
+      }
+      div.glow>div.inner{
+        color: white;
+        text-shadow: 2px 2px 4px black;
+      }
+
+      div.inset{
+        box-shadow: 10px 10px 30px darkorange inset;
+      }
+
+      div.inset>div.inner{
+        color: bisque;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black ;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer drop">
+      <div class="inner">HTML</div>
+    </div>
+    <div class="outer glow">
+      <div class="inner">CSS</div>
+    </div>
+    <div class="outer inset">
+      <div class="inner">JS</div>
+    </div>
+  </body>
 </html>
