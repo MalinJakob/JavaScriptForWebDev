@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transform shapes</title>
+  <style>
+    div{
+      display: inline-block;
+      margin: 50px 0 0 50px;
+      padding: 15px;
+      background: darkorange;
+      color: antiquewhite;
+      font: 1.5em sans-serif;
+    }
+
+    div.rotate:hover{
+      transform: rotate(45deg);
+    }
+
+    div.scale:hover{
+      transform: scale(2.0, 2.0);
+    }
+
+    div.skew:hover{
+      transform: skew(15deg, 15deg);
+    }
+  </style>
+
+</head>
+<body>
+  <div class="rotate">Rotate</div>
+  <div class="scale">Scale</div>
+  <div class="skew">Skew</div>
+</body>
+</html>
