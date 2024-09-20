@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decorate Borders</title>
+  <style>
+    div{
+      display: inline-block;
+      width: 175px;
+      height: 100px;
+      margin: 10px;
+      border: 30px solid transparent;
+      background: bisque;
+    }
+
+
+    div.image{
+      border-image: url(Images/border.png);
+    }
+
+    div.round{
+      border-image: url(Images/border.png)33% round;
+    }
+
+    div.stretch{
+      border-image: url(Images/border.png)10% stretch;
+    }
+
+    div.gradient{
+      border-image: repeating-linear-gradient(45deg, orangered
+    , orange 20%)33%;
+    }
+  </style>
+</head>
+<body>
+  <div class="image"></div>
+  <div class="round"></div>
+  <div class="stretch"></div>
+  <div class="gradient"></div>
+</body>
+</html>
