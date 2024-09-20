@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blend Gradients</title>
+    <style>
+      div {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border: 2px solid blueviolet;
+        background: orange;
+      }
+
+      div.linear {
+        background: linear-gradient(45deg, darkorange, bisque);
+      }
+
+      div.linear-repeat {
+        background: repeating-linear-gradient(
+          darkorange 20%,
+          bisque 40%,
+          orangered 50%
+        );
+      }
+
+      div.radial {
+        background: radial-gradient(darkorange 20%, bisque 40%, orangered 50%);
+      }
+
+      div.radial-repeat{
+        background: repeating-radial-gradient(darkorange 20%, bisque 40%, orangered 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="linear"></div>
+    <div class="linear-repeat"></div>
+    <div class="radial"></div>
+    <div class="radial-repeat"></div>
+  </body>
+</html>
