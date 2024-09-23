@@ -1,0 +1,52 @@
+
+#nav-horizontal{
+  background: #BBD0FF;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li a{
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  float: left;
+}
+
+li a.current{
+  background: #FFD6FF;
+}
+li a:hover{
+  background: #FFD6FF; color:#BBD0FF;
+}
+
+#my-name{
+  color: white;
+  padding: 20px;
+}
+.my-header{
+  background: #FFD6FF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.circle-image{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px;
+}
+.circle-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
