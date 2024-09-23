@@ -165,9 +165,47 @@ blockquote{
   padding: 10px;
 }
 
-.fa fa-facebook{
-  color: white ;
+.skills-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
+
+
+
+.skills-list-item{
+  margin: 20px;
+  background: linear-gradient(45deg, #BBD0FF, #E7C6FF);
+  padding: 20px;
+  color: white;
+  border-radius:80%;
+  text-align: center;
+  box-shadow: 5px 5px 5px #BBD0FF;
+}
+
+.skills-list-item:hover{
+  transform: skew(5deg,5deg);
+  position: relative;
+
+}
+
+.background-history{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  border:2px dashed #BBD0FF;
+  padding: 20px;
+  margin: 20px;
+}
+
+.background-history>p{
+  width: 400px;
+}
+
+
+
 
 
 
