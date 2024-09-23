@@ -11,24 +11,33 @@ body {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+.body-header-white{
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
 p{
   line-height: 1.5em;
   color: grey;
   margin:20px
 }
 
+
+
 #nav-horizontal{
   background: #BBD0FF;
 }
 
-ul{
+#horizontal{
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-li a{
+.horizontal-list>li a{
   display: inline-block;
   text-decoration: none;
   text-align: center;
@@ -81,3 +90,56 @@ li a:hover{
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
 }
+
+.background-gradient{
+  background: linear-gradient(45deg, #E7C6FF, #BBD0FF);
+}
+
+#box-p{
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+
+.read-more{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.body-list{
+  display: list-item;
+  list-style-type: none;
+}
+
+.body-list>li{
+  background: #E7C6FF; width: 200px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.body-list>li:hover{
+  background-color: #FFD6FF;
+}
+
+.item{
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+blockquote{
+  line-height: 1.5em;
+  color: grey;
+  margin:20px;
+  border: 5px solid #E7C6FF;
+  padding: 20px;
+}
+
+
+
+
+
