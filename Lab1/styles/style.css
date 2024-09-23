@@ -139,7 +139,35 @@ blockquote{
   padding: 20px;
 }
 
+.footer{
+  background: #BBD0FF;
+  color: white;
+  padding: 15px 0;
+  height: 250px;
+  text-align: center;
+}
 
+
+.contact{
+  color: white;
+  text-decoration: none;
+}
+
+.contact:hover{
+  color: #FFD6FF;
+}
+
+.footer-p{
+  color: white;
+}
+
+.social-media{
+  padding: 10px;
+}
+
+.fa fa-facebook{
+  color: white ;
+}
 
 
 
