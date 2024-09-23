@@ -1,4 +1,22 @@
 
+body {
+  font-family: Georgia,  sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.body-header{
+  color: #BBD0FF;
+  margin-top: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+p{
+  line-height: 1.5em;
+  color: grey;
+  margin:20px
+}
+
 #nav-horizontal{
   background: #BBD0FF;
 }
@@ -50,3 +68,16 @@ li a:hover{
   object-fit: cover;
 }
 
+.image-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.image-container img {
+  width: 30%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
+}
