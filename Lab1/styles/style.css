@@ -52,6 +52,9 @@ p{
   float: left;
 }
 
+li a {
+  transition: background 0.5s ease;
+}
 li a.current{
   color: white;
   background: #FFD6FF;
