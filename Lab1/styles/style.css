@@ -5,11 +5,18 @@ body {
   padding: 0;
 }
 
+.main{
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .body-header{
   color: #BBD0FF;
   margin-top: 35px;
   margin-left: 20px;
   margin-right: 20px;
+  text-align: center;
 }
 
 .body-header-white{
@@ -25,9 +32,8 @@ p{
 }
 
 
-
 #nav-horizontal{
-  background: #BBD0FF;
+  background: linear-gradient(45deg, #BBD0FF, #E7C6FF);
 }
 
 #horizontal{
@@ -47,10 +53,12 @@ p{
 }
 
 li a.current{
+  color: white;
   background: #FFD6FF;
 }
 li a:hover{
-  background: #FFD6FF; color:#BBD0FF;
+  background: #FFD6FF; 
+  color: white;
 }
 
 #my-name{
@@ -58,7 +66,7 @@ li a:hover{
   padding: 20px;
 }
 .my-header{
-  background: #FFD6FF;
+  background: linear-gradient(45deg, #BBD0FF, #E7C6FF);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -107,6 +115,13 @@ li a:hover{
 .read-more{
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.read-more-wrapper{
+  display: flex;
   flex-direction: row;
 }
 
@@ -115,13 +130,23 @@ li a:hover{
   list-style-type: none;
 }
 
-.body-list>li{
-  background: #E7C6FF; width: 200px;
-  padding: 20px;
-  margin: 10px;
+.body-list li{
+  margin-top: 20px;
+  margin-right: 75px;
 }
 
-.body-list>li:hover{
+.body-list li a{
+  display: block;
+  width: 250px;   
+  padding: 20px; 
+  background-color: #E7C6FF;
+  text-decoration: none; 
+  color: white;    
+  border-radius: 8px; 
+  box-shadow:1px 3px 3px 1px #BBD0FF;
+}
+
+.body-list li a:hover{
   background-color: #FFD6FF;
 }
 
@@ -140,7 +165,7 @@ blockquote{
 }
 
 .footer{
-  background: #BBD0FF;
+  background: linear-gradient(45deg, #E7C6FF, #BBD0FF);
   color: white;
   padding: 15px 0;
   height: 250px;
@@ -206,10 +231,17 @@ blockquote{
 
 
 .time-line{
-  margin: 100px;
+  margin: 5px;
   display: flex;
   align-items: center;
   flex-direction: row;
+  position: relative;
+}
+
+.ball-wrapper{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 div.ball {
@@ -232,16 +264,38 @@ div.label {
   vertical-align: middle;
 }
 
-@keyframes bounce{
-  from{bottom:100px}
-  50%{top: 20px;}
-  to{bottom: 100px;}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
 }
+
 
 div.ball{
-  animation: bounce 2s infinite alternate;
+  animation: bounce 2s 5 alternate;
 }
 
+.line {
+  border-bottom: 2px solid #888;
+  height: 1px;
+  width: 100px;
 
+}
+
+#ball-1{
+  animation-delay: 1s;
+}
+
+#ball-2{
+  animation-delay: 2s;
+}
+
+#ball-3{
+  animation-delay: 3s;
+}
 
 
