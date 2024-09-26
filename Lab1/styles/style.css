@@ -107,7 +107,6 @@ li a:hover{
   display: flex;
   justify-content: space-around;
   padding: 20px;
-  background-color: #fff;
 }
 
 .image-container img {
@@ -120,6 +119,7 @@ li a:hover{
 .background-gradient{
   background: linear-gradient(45deg, #E7C6FF, #BBD0FF);
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .box-p{
@@ -273,6 +273,7 @@ div.ball {
   background: #BBD0FF;
   border-radius: 50%;
   margin: 60px;
+  box-shadow: 2px 5px 10px #BBD0FF;
 }
 
 div.label {
@@ -316,6 +317,7 @@ div.ball{
 #ball-3{
   animation-delay: 3s;
 }
+
 
 .gallery-wrapper{
   display: flex;
