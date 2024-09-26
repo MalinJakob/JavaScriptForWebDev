@@ -34,6 +34,10 @@ p{
 
 #nav-horizontal{
   background: linear-gradient(45deg, #BBD0FF, #E7C6FF);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
 }
 
 #horizontal{
@@ -41,6 +45,12 @@ p{
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+.horizontal-list{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .horizontal-list>li a{
@@ -52,13 +62,17 @@ p{
   float: left;
 }
 
+
 li a {
   transition: background 0.5s ease;
 }
+
 li a.current{
   color: white;
   background: #FFD6FF;
 }
+
+
 li a:hover{
   background: #FFD6FF; 
   color: white;
@@ -81,6 +95,7 @@ li a:hover{
   border-radius: 50%;
   overflow: hidden;
   margin: 20px;
+  z-index: 3;
 }
 .circle-image img{
   width: 100%;
@@ -104,9 +119,10 @@ li a:hover{
 
 .background-gradient{
   background: linear-gradient(45deg, #E7C6FF, #BBD0FF);
+  margin-top: 50px;
 }
 
-#box-p{
+.box-p{
   color: white;
   text-align: center;
   padding-top: 10px;
@@ -329,5 +345,13 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
+
+.video{
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 
