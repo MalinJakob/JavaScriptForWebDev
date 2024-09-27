@@ -60,6 +60,7 @@ p{
   color: white;
   padding: 20px;
   float: left;
+  letter-spacing: 0.15em;
 }
 
 
@@ -359,6 +360,72 @@ div.desc {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Contact page */
+
+.contact-box{
+  border: 2px dashed #BBD0FF;
+  padding: 20px;
+  margin: 40px;
+  font-family: georgia, sans-serif;
+
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-box input:focus {
+  background: #BBD0FF;
+}
+
+.form-input{
+  border: 2px solid #BBD0FF;
+}
+
+legend, label{
+  color: #BBD0FF;
+  font-weight: bold;
+  margin: 10px;
+}
+
+textarea{
+  height: 250px;
+  width: 100%;
+}
+
+
+.send-box{
+  border: 2px dashed #BBD0FF;
+  padding: 20px;
+  margin: 40px;
+}
+
+#send-button{
+  background: linear-gradient(45deg, #BBD0FF, #E7C6FF);
+  color: white;
+  border: 1px solid #E7C6FF;
+  height: 40px;
+  width: 100px;
+  border-radius: 10%;
+  box-shadow: 0.5px 0.5px 0.5px #BBD0FF;
+  margin: 10px;
+  float: right;
+
+}
+
+#send-button:hover {
+  background: #FFD6FF;
+  cursor: pointer;
+}
+
+#send-button:active {
+  background: white;
+  color: #FFD6FF;
+  border: 2px solid #BBD0FF ;
 }
 
 
