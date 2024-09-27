@@ -78,6 +78,12 @@ li a:hover{
   color: white;
 }
 
+li a:focus{
+  background-color: white;
+  color: #FFD6FF;
+  transition-timing-function: ease-in 0.5s;
+}
+
 #my-name{
   color: white;
   padding: 20px;
