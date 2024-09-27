@@ -31,6 +31,7 @@ p{
   margin:20px
 }
 
+/* horizontal nav bar */
 
 #nav-horizontal{
   background: linear-gradient(45deg, #BBD0FF, #E7C6FF);
@@ -63,6 +64,8 @@ p{
   letter-spacing: 0.15em;
 }
 
+/* horizontal nav bar */
+/* list and anchor effects */
 
 li a {
   transition: background 0.5s ease;
@@ -84,7 +87,8 @@ li a:focus{
   color: #FFD6FF;
   transition-timing-function: ease-in 0.5s;
 }
-
+/* list and anchor effects */
+/* header */
 #my-name{
   color: white;
   padding: 20px;
@@ -128,6 +132,8 @@ li a:focus{
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+/* header */
 
 .box-p{
   color: white;
