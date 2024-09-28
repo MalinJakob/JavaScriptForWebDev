@@ -61,6 +61,13 @@ img{
   max-width: 100%;
   height: auto;
 }
+
+/* videeo styling*/
+video{
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+}
 /* general design on website */
 
 /* nav bar */
@@ -302,7 +309,7 @@ li a:focus{
 .social-media .fa{
   padding: 10px;
   font-size: 20px;
-  width: 20px;
+  width: 40px;
   border-radius: 50%;
   text-decoration: none;
   margin: 5px 2px;
@@ -335,6 +342,12 @@ li a:focus{
   text-decoration: none;
 }
 /* social media icon styling */
+
+@media (max-width:1024){
+  .footer-content{
+    margin:0;
+  }
+}
 
 /* footer */
 
@@ -482,6 +495,7 @@ blockquote{
   position: relative;
   overflow-x: scroll;
   max-width:100vw;
+  justify-content: center;
 }  
 
 .ball-wrapper{
