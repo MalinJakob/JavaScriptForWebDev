@@ -238,6 +238,12 @@ li a:focus{
   color: white;
   text-decoration: none;
 }
+
+.social-media .fa-github {
+  background: #2d5265;
+  color: white;
+  text-decoration: none;
+}
 /* social media icon styling */
 
 /* footer */
