@@ -1,9 +1,19 @@
 
 /* general design on website */
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Georgia,  sans-serif;
-  margin: 0;
+}
+
+
+ul {
+  margin:0;
   padding: 0;
 }
 
@@ -16,8 +26,6 @@ body {
 .body-header{
   color: #BBD0FF;
   margin-top: 35px;
-  margin-left: 20px;
-  margin-right: 20px;
   text-align: center;
 }
 
@@ -41,13 +49,25 @@ p{
   padding-right: 20px;
   padding-bottom: 30px;
 }
+/* styling for content box within body */
+.background-gradient{
+  background: linear-gradient(45deg, #E7C6FF, #BBD0FF);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* image styling */
+img{
+  max-width: 100%;
+  height: auto;
+}
 /* general design on website */
 
-/* horizontal nav bar */
+/* nav bar */
 #nav-horizontal{
   background: linear-gradient(45deg, #BBD0FF, #E7C6FF);
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 2;
   top: 0;
 }
@@ -62,11 +82,10 @@ p{
 .horizontal-list{
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 100vw;
 }
 
 .horizontal-list>li a{
-  display: inline-block;
   text-decoration: none;
   text-align: center;
   color: white;
@@ -74,7 +93,73 @@ p{
   float: left;
   letter-spacing: 0.15em;
 }
-/* horizontal nav bar */
+
+#mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#menu-toggle{
+  display: none;
+}
+
+.hamburger-icon{
+  display: none;
+  cursor: pointer;
+  height: 25px;
+  width: 30px;
+}
+
+
+.mobile-menu{
+  display: none;
+  padding: 5px;
+  float: right;
+  width: 100vw;
+}
+.mobile-menu ul{
+  list-style: none;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+}
+
+.mobile-menu ul li a{
+  text-decoration: none;
+  margin-left: 10px;
+  color: #BBD0FF;
+  font-size: x-large;
+
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 6px;
+  background-color: #BBD0FF;
+  border-radius: 2px;
+  margin: 3px;
+}
+
+
+/*mobile and ipad styling for nav bar hamburger menu*/
+@media (max-width:1024px){
+  #nav-horizontal{
+    display: none;
+  }
+  
+  .hamburger-icon{
+    display: block;
+  }
+  #menu-toggle:checked ~ .mobile-menu {
+    display: block;
+  }
+
+}
+  
+
+/* nav bar */
 
 /* list and anchor effects */
 li a {
@@ -100,6 +185,10 @@ li a:focus{
 /* list and anchor effects */
 
 /* header */
+
+#top {
+  width: 100vw;
+}
 #my-name{
   color: white;
   padding: 20px;
@@ -110,6 +199,7 @@ li a:focus{
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
+  width: 100vw;
 }
 .circle-image{
   width: 200px;
@@ -138,11 +228,8 @@ li a:focus{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
 }
 
-.background-gradient{
-  background: linear-gradient(45deg, #E7C6FF, #BBD0FF);
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
+/**/
+
 /* header */
 
 /* footer */
@@ -151,16 +238,19 @@ li a:focus{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .footer-content{
   color: white;
   padding: 15px 0;
-  height: 250px;
+  min-height: 250px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .address{
@@ -262,6 +352,26 @@ li a:focus{
   flex-direction: row;
 }  
 
+.read-more-wrapper article{
+  margin-right: 75px;
+  padding: 20px;
+}
+/* ipad and mobile styling for read more */
+@media (max-width:1020px){
+  .read-more-wrapper{
+    flex-wrap: wrap;
+  }
+  .read-more-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .read-more-wrapper article{
+    margin: 0;
+  }
+}
+
 .body-list{
   display: list-item;
   list-style-type: none;
@@ -269,18 +379,20 @@ li a:focus{
 
 .body-list li{
   margin-top: 20px;
-  margin-right: 75px;
 }  
 
 .body-list li a{
-  display: block;
-  width: 250px;   
+  width: 300px; 
+  max-width: 55vw;  
   padding: 20px; 
   background-color: #E7C6FF;
   text-decoration: none; 
   color: white;    
   border-radius: 8px; 
   box-shadow:1px 3px 3px 1px #BBD0FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }  
 
 .body-list li a:hover{
@@ -296,9 +408,13 @@ li a:focus{
 blockquote{
   line-height: 1.5em;
   color: grey;
-  margin:20px;
   border: 5px solid #E7C6FF;
   padding: 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-top: 30px;
 }  
 /* read more section - home page */ 
 
@@ -319,6 +435,7 @@ blockquote{
   border-radius:80%;
   text-align: center;
   box-shadow: 5px 5px 5px #BBD0FF;
+  min-width: 50px;
 }  
 
 .skills-list-item:hover{
@@ -326,9 +443,10 @@ blockquote{
   position: relative;
 
 }  
+
 /* skills list - with transformation */
 
-/* history section - about page */
+/* history section - about page  & project page*/
 .background-history{
   display: flex;
   justify-content: space-around;
@@ -339,10 +457,21 @@ blockquote{
   margin: 20px;
 }  
 
+.background-history p{
+  max-width: 60vw;
+}
+
 .background-history>p{
   width: 400px;
 }  
-/* history section - about page */
+
+/* mobile styling for background history */
+@media (max-width:780px){
+  .background-history{
+    flex-direction: column;
+  }
+}
+/* history section - about page & project page */
 
 /* time lina and animation */
 .time-line{
@@ -351,6 +480,8 @@ blockquote{
   align-items: center;
   flex-direction: row;
   position: relative;
+  overflow-x: scroll;
+  max-width:100vw;
 }  
 
 .ball-wrapper{
@@ -361,7 +492,6 @@ blockquote{
 
 div.ball {
   position: relative;
-  top: 10px;
   width: 120px;
   height: 120px;
   color: white;
@@ -399,6 +529,37 @@ div.ball{
   width: 100px;
 }  
 
+/* Mobile styling for timeline */
+@media (max-width: 780px) {
+  .time-line {
+    flex-direction: column;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }  
+    50% {
+      transform: translateY(-15px);
+    }  
+  } 
+
+  .line {
+    border-bottom: none;
+    height:15px;
+    width: 1px;
+    border-left: 2px solid #888;
+  }
+
+  div.ball{
+    margin: 20px;
+  }
+
+  .time-line .body-header{
+    margin-bottom: 40px;
+  }
+}
+
 #ball-1{
   animation-delay: 1s;
 }  
@@ -419,7 +580,17 @@ div.ball{
   justify-content: center;
   margin: 20;
   align-items: center;
+  max-width: 100vw;
+  overflow-x:scroll;
 }  
+/*mobile styling for gallery*/
+
+@media (max-width:780px){
+  .gallery-wrapper{
+    justify-content: flex-start;
+  }
+}
+
 /* gallery styling*/
 div.gallery {
   margin: 20px;

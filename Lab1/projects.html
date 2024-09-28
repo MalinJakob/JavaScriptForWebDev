@@ -12,7 +12,7 @@
     />
     <title>Malin Jakob</title>
   </head>
-  <body>
+  <body class="content">
     <header id="top">
       <div id="nav-horizontal">
         <nav>
@@ -33,6 +33,22 @@
           src="images/profilbild.jpg"
           alt="profile picture of me standing in front of bushes with white flowers"
         />
+      </div>
+      <div id="mobile-nav">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="mobile-menu">
+          <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main class="main">
@@ -151,9 +167,9 @@
         <nav id="nav-vertical">
           <ul id="vertical">
             <div class="vertical-list">
-              <li><a href="home.html" class="current">HOME</a></li>
+              <li><a href="home.html" >HOME</a></li>
               <li><a href="about.html">ABOUT</a></li>
-              <li><a href="projects.html">PROJECTS</a></li>
+              <li><a href="projects.html" class="current">PROJECTS</a></li>
               <li><a href="contact.html">CONTACT</a></li>
             </div>
           </ul>
@@ -189,10 +205,12 @@
           ></a>
           <a
             href="https://www.linkedin.com/in/malin-jakob-0b58aa159/"
+            target="_blank"
             class="fa fa-linkedin"
           ></a>
           <a
             href="https://github.com/MalinJakob/JavaScriptForWebDev/tree/main/Lab1"
+            target="_blank"
             class="fa fa-github"
           ></a>
         </div>

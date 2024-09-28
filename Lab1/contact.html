@@ -32,7 +32,24 @@
           alt="profile picture of me standing in front of bushes with white flowers"
           />
         </div>
-        <form
+        <div id="mobile-nav">
+          <input type="checkbox" id="menu-toggle">
+          <label for="menu-toggle" class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <nav class="mobile-menu">
+            <ul class="nav-links">
+              <li><a href="home.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="projects.html">PROJECTS</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <form
         action="mailto:malin.jakob98@gmail.com"
         method="post"
         enctype="multipart/form-data">
@@ -77,10 +94,10 @@
           <nav id="nav-vertical">
             <ul id="vertical">
               <div class="vertical-list">
-                <li><a href="home.html" class="current">HOME</a></li>
+                <li><a href="home.html" >HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="contact.html" class="current">CONTACT</a></li>
               </div>
             </ul>
           </nav>
@@ -98,8 +115,8 @@
           <div class="social-media">
             <a href="https://www.facebook.com/malin.jakob" target="_blank" class="fa fa-facebook"></a>
             <a href="https://www.instagram.com/malinjakob/" target="_blank" class="fa fa-instagram"></a>
-            <a href="https://www.linkedin.com/in/malin-jakob-0b58aa159/" class="fa fa-linkedin"></a>
-            <a href="https://github.com/MalinJakob/JavaScriptForWebDev/tree/main/Lab1" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/malin-jakob-0b58aa159/" target="_blank" class="fa fa-linkedin"></a>
+            <a href="https://github.com/MalinJakob/JavaScriptForWebDev/tree/main/Lab1" target="_blank" class="fa fa-github"></a>
           </div>
           <div class="copy-right">
             <p class="footer-p">&copy; 2024 Malin Jakob AB</p>
