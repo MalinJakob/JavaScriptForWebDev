@@ -240,17 +240,20 @@ li a:focus{
 /* header */
 
 /* footer */
+
 .footer{
+  position: relative;
   background: linear-gradient(45deg, #E7C6FF, #BBD0FF);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: georgia, sans-serif;
+  text-align: center;
+  padding: 30px 0px;
   width: 100vw;
 }
 
+
 .footer-content{
   color: white;
-  padding: 15px 0;
+  padding: 50px 0;
   min-height: 250px;
   display: flex;
   flex-direction: row;
@@ -260,9 +263,6 @@ li a:focus{
   overflow: hidden;
 }
 
-.address{
- padding: 50px;
-}
 
 .contact{
   color: white;
@@ -282,24 +282,27 @@ li a:focus{
 
 #nav-vertical{
   letter-spacing: 0.15em;
-  padding-left: 100px;
-  padding-right: 100px;
 }
 
 #vertical{
   list-style-type: none;
 }
 
-.vertical-list a{
+.vertical-list li a{
   padding: 10px;
-  display:block;
+  display: block;
   text-decoration: none;
   color: white;
 }   
 
 .copy-right{
-  display: block;
-  padding: 50px;
+  position: absolute;
+  width: 100%;
+  line-height: 40px;
+  font-size: 0.7em;
+  text-align: center;
+  bottom:0;
+  
 }  
 /* social media icon styling */
 .social-media{
@@ -345,7 +348,6 @@ li a:focus{
 
 @media (max-width:1024){
   .footer-content{
-    margin:0;
   }
 }
 
