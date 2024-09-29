@@ -676,6 +676,7 @@ div.gallery {
 
 div.gallery:hover {
   border: 2px solid #FFD6FF;
+  cursor: pointer;
 }  
 
 div.desc {
