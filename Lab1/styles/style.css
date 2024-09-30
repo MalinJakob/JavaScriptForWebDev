@@ -284,8 +284,6 @@ li a:focus{
   padding: 20px;
 }
 
-
-
 .contact:hover{
   background: #FFD6FF;
   color: white;
@@ -296,7 +294,6 @@ li a:focus{
   color: white;
   letter-spacing: 0.05em;
 }
-
 
 #footer-nav{
   list-style-type: none;
