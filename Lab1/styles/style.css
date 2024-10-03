@@ -17,9 +17,17 @@ ul {
 
 p{
   line-height: 1.5em;
+  font-size: 1rem;
   color: grey;
-  margin:20px
+  margin:20px;
 }
+
+@media (max-width:780px){
+  p{
+    font-size: 1.3rem;
+  }
+}
+
 
 /* image styling */
 img{
@@ -647,6 +655,20 @@ div.ball{
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
 }
+
+/* mobile styling for image gallery*/
+@media (max-width:780px){
+  .image-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+}
 /* image gallery styling  */
 
 /* project gallery styling*/
@@ -663,7 +685,7 @@ div.ball{
 /*mobile styling for gallery*/
 @media (max-width:780px){
   .gallery-wrapper{
-    justify-content: flex-start;
+    flex-direction: column;
   }
 }
 
