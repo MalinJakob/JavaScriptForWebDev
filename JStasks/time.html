@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        const now = new Date();
+        let hour = now.getHours();
+        let minute = now.getMinutes();
+        let second = now.getSeconds();
+        let millisecond = now.getMilliseconds();
+
+        if (minute < 10) {
+          minute = "0" + minute;
+        }
+        if (second < 10) {
+          second = "0" + second;
+        }
+
+        let time =
+          "It is now; " +
+          hour +
+          "; " +
+          minute +
+          ":" +
+          second +
+          " and " +
+          millisecond +
+          " milliseconds ";
+        console.log(time);
+
+        let greeting = "Good Morning ";
+        if (hour > 11) {
+          greeting = "Good Afternoon";
+        }
+        if (hour > 17) {
+          greeting = "Good Evening";
+        }
+        console.log(greeting);
+
+        let suffix = hour > 11 ? "P.M" : "A.M";
+        if (hour > 17) {
+          hour -= 12;
+        }
+        console.log("Time is " + hour + ":" + minute + " " + suffix);
+      })();
+    </script>
+  </body>
+</html>
