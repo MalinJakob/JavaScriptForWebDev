@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Elements Loop</title>
+  </head>
+  <body>
+    <script>
+      (function(){
+        let i, result, boolArray = []
+        console.log("Fill Elements...")
+        for (i = 1 ; i < 11 ; i++)
+        {
+          boolArray[i] = (i % 2 === 0) ? true : false
+          console.log("Eleement " + i + ":" + boolArray[i])
+        }
+
+        console.log("Read Elements..")
+        result = ""
+
+        for (i = 1 ; i < boolArray.length ; i++ ){
+          if (boolArray[i]){
+            result += i + "|"
+          }
+        }
+        console.log("True in Elements: " + result)
+
+        result = ""
+
+        for (i = 1 ; i < boolArray.length ; i++)
+        {
+          if(!boolArray[i]) { result += i + "|"}
+        }
+        console.log("False in Elements: "  + result)
+        
+      })()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sort Arrays</title>
+</head>
+<body>
+  <script>
+    (function(){
+      let hues = ["Red" , "RED", "red", "Green", "Blue"]
+      let nums = [ 1, 20 , 3, 17 , 14, 0.5]  
+
+      console.log("Colors; " + hues)
+      console.log("Dictionary Sort; " + hues.sort())
+      console.log("\Numbers; " + nums)
+      console.log("Dictionary Sort; " + nums.sort())
+      console.log("Numerical SOrt; " + nums.sort(sortNums))
+      console.log("Reverse sort; " + nums.reverse())
+
+      function sortNums(numOne, numTwo){
+        return numOne - numTwo
+      }
+
+    })()
+  </script>
+</body>
+</html>
