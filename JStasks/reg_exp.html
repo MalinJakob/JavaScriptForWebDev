@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match Patterns - Reg Exp</title>
+  </head>
+  <body>
+    <script>
+      // (function(){
+
+      // })()
+      (function () {
+        const system = "Window",
+          suite = "Office",
+          pattern = /ice/i;
+
+        console.log("In " + system + "? " + pattern.test(system));
+        console.log("In " + suite + "? " + pattern.test(suite));
+
+        let result = pattern.exec(suite);
+        if (result) {
+          console.log("Found: " + result + " at " + result.index);
+        } else {
+          console.log("No Matches Found");
+        }
+
+        let email = "mike@gmail";
+        const format = /.+\@.+\..+/;
+        console.log(email + " Valid? " + format.test(email));
+
+        email += ".com";
+        console.log(email + " Valid? " + format.test(email));
+      })();
+    </script>
+  </body>
+</html>
