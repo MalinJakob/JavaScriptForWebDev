@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Built-in Objects</title>
+</head>
+<body>
+  <script>
+    function builtIn(){
+      let jsString = "Text"
+      let jsNumber = 125000
+      let jsBoolean = true 
+  
+      let jsObject = { firstName : "Mike", lastName : "McGrath"}
+      let jsDate = new Date()
+      let jsArray = [1, 2, 3, 4]
+      let jsMath = Math
+      let jsError  = new Error ("Error!")
+      
+      console.log("Date Object: " + jsDate)
+      console.log("Locale Date string: " + jsDate.toLocaleString())
+  
+      console.log("\nPrimitive Number: " + jsNumber)
+      console.log("Local Number String: " + jsNumber.toLocaleString())
+    }
+
+    console.log(builtIn())
+
+  </script>
+</body>
+</html>

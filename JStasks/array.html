@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      (function(){
+        let jsArray = new Array(10)
+        console.log(jsArray[0])
+        console.log(jsArray)
+
+        let month,summer = ["June", "July","August" ]
+
+        for (month in summer){
+          if (month !== "")
+          {
+            console.log(month + ": " + summer[month])
+          }
+        }
+
+        console.log("Start of summer; " + summer[0])
+        console.log(summer)
+      })()
+    </script>
+  </body>
+</html>
