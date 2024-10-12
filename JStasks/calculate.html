@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate</title>
+</head>
+<body>
+  <script>
+
+    let pizzaPrice = 10 
+    let toppingPrice = 2
+    let numberOfToppings = 3 
+
+    result = pizzaPrice + (toppingPrice * numberOfToppings) 
+    console.log("You ordered a pizza with " + numberOfToppings + " toppings at " + toppingPrice + " € each. The total cost is " + result);
+
+
+    function myPizzaCalculater () {
+      let pizzaPrice = 10 
+      let toppingPrice = 2
+      let numberOfToppings = 3 
+      return pizzaPrice + (toppingPrice * numberOfToppings) 
+    }
+
+    console.log("You ordered a PIZZA with " + numberOfToppings + " toppings at " + toppingPrice + " € each. The total cost is " + myPizzaCalculater());
+  </script>
+</body>
+</html>
