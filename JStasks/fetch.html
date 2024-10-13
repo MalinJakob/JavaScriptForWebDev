@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch</title>
+</head>
+<body>
+  <script>
+    fetch("data/weekdays.json")
+    .then(response => response.json())
+    .then ( data => list(data)) 
+    .catch ( err => console.log(err))
+
+    function list(data){
+      const values = Object.values(data)
+      let i = 0
+      while (i < values.length ) {
+        console.log ( values[i]) ; i++
+      }
+    }
+  </script>
+</body>
+</html>

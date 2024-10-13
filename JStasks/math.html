@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match Object Calculation and Use</title>
+  </head>
+  <body>
+    <script>
+      //Calculate Areas
+      (function () {
+        let radius = 4;
+        console.log("\nRadius of Circle: " + radius);
+
+        let area = Math.PI * radius;
+        console.log("\nArea of Circle: " + area);
+
+        let cube = radius * radius * radius;
+        let volume = (4 / 3) * Math.PI * cube;
+        console.log("\nVolume of Sphere" + volume);
+      })();
+
+       //Compare Numbers
+       (function () {
+        let square = Math.pow(5,2)
+        let cube = Math.pow(4,3)
+
+        console.log('\nLargest Positive: ' + Math.max(square, cube))
+        console.log('\Smallest Positive: ' + Math.min(square, cube))
+
+        square *= -1
+        cube *= -1
+
+        console.log('\nLargest Negative: ' + Math.max(square, cube))
+        console.log('\nSmallest Negative: ' + Math.min(square, cube))
+      })();
+
+      //Round Decimals
+      (function () {
+       let bodyTemp = 98.6
+
+       console.log('Ceiling ' + Math.ceil(bodyTemp))
+       console.log('Floor ' + Math.floor(bodyTemp))
+       console.log('Round ' + Math.round(bodyTemp))
+
+       console.log('\nImprecision ' + (81.66 * 15))
+       console.log('\nCorrected ' + (((81.66 * 100)* 15) / 100 ))
+
+       console.log('\nFloat ' + Math.PI)
+       console.log('\nCommuted;' + ((Math.round (Math.PI * 100) / 100)))
+      })();
+
+       //Generate Randoms
+       (function () {
+
+        let i, rand , temp , nums = []
+        let str = '\n\nYour Six Lucky Numbers; '
+
+        for (i = 1 ; i < 60 ; i++) {
+          nums [i] = i
+        }
+
+        for (i = 1 ; i < 60 ; i++) {
+          rand = Math.ceil(Math.random() * 59)
+          temp = nums [i]
+          nums[i] = nums [rand]
+          nums [rand] = temp
+        }
+
+        for (i = 1 ; i < 7 ; i++){
+          str += nums[i]
+          if (i !==6) {
+            str += ' - '
+          }
+        }
+        console.log(str)
+      })();
+    </script>
+  </body>
+</html>
