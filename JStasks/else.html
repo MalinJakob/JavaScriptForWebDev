@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Else Statements</title>
+</head>
+<body>
+  <script>
+    (function () {
+        let flag = false;
+        const num = 10;
+
+        if (!flag) {
+          console.log("Power is OFF");
+        } else {
+          console.log("Power is ON");
+        }
+
+        if (num === 5) {
+          console.log("Number is 5");
+        } else  if  (num === 10) {
+          console.log("Number is 10");
+        }
+        else {
+          console.log('The number is either 5 or 10')
+        }
+      })();
+  </script>
+</body>
+</html>
