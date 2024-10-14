@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trim Strings</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        let str = " Love For All, Hatred For None. ";
+
+        console.log("String; " + str);
+        console.log('Starts with "L"? ' + str.startsWith("L"));
+        console.log('Ends with "."? ' + str.endsWith("."));
+        console.log("First Letter: " + str[0]);
+
+        str = str.trim();
+
+        console.log("Trimmed: " + str);
+        console.log('Starts with "L"? ' + str.startsWith("L"));
+        console.log('Ends with "."? ' + str.endsWith("."));
+        console.log("First Letter: " + str[0]);
+
+        console.log('\nIncludes "Hat" ?' + str.includes("Hat"));
+        console.log('\nIncludes "hat" ?' + str.includes("hat"));
+
+        console.log('\Repeat\n "hat"' + str.repeat(10));
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Characters</title>
+</head>
+<body>
+  <script>
+    (function(){
+       let str = 'JavaScript in easy steps'
+
+       console.log('"Script" Search: ' + str.search('Script'))
+       console.log('"script" Search: ' + str.search('script'))
+
+       console.log('\n "Script" Match: ' + str.match('Script'))
+       console.log('\n "script" Match: ' + str.match('script'))
+
+       console.log('\n indexOf "s" Match: ' + str.indexOf('s'))
+       console.log('\n indexOf "m" Match: ' + str.indexOf('m'))
+       console.log('\n lastIndexOf "s" Match: ' + str.lastIndexOf('s'))
+       console.log('\n LastIndexOf "m" Match: ' + str.indexOf('m'))
+
+       console.log('\n charAt 0:' + str.charAt(0))
+       console.log('\n charCodeAt 0:' + str.charCodeAt(0))
+       console.log('\n fromCharCodeAt: ' + String.fromCharCode(74,97,118,97))
+
+       console.log('\n Original ' + str)
+       console.log('\n Replaced ' + str.replace('easy', 'simple'))
+
+    })()
+  </script>
+</body>
+</html>
