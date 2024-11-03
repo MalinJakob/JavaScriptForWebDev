@@ -20,6 +20,7 @@ form{
   padding: 1em;
   background: #FFE6A5;
   margin-bottom: 1em;
+  border-radius: 4px;
 }
 
 fieldset{

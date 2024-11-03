@@ -65,6 +65,7 @@
           <input type="radio" name="largestEl" value="asianElephant" /> Asian
           elephant <br />
         </div>
+        <p class="errorMessage" id="errorQ1"></p>
 
         <!-- Question 2 -->
         <div class="questions">
@@ -85,6 +86,7 @@
           <input type="checkbox" name="characteristics" value="useTrunks" />
           Elephants use their trunks for drinking and eating <br />
         </div>
+        <p class="errorMessage" id="errorQ2"></p>
 
         <!-- Question 3 -->
         <div class="questions">
@@ -92,13 +94,14 @@
             >3. What is the average lifespan of an elephant in the wild?</label
           ><br />
           <input
-            type="text"
+            type="number"
             id="lifeSpan"
             name="lifespan"
             placeholder="Write your answer here"
             required
           />
         </div>
+        <p class="errorMessage" id="errorQ3"></p>
 
         <!-- Question 4 -->
         <div class="questions">
@@ -115,6 +118,7 @@
           <input type="radio" name="coolingOff" value="divingUnderWater" />
           Diving underwater<br />
         </div>
+        <p class="errorMessage" id="errorQ4"></p>
 
         <!-- Question 5 -->
         <div class="questions">
@@ -129,6 +133,7 @@
             required
           />
         </div>
+        <p class="errorMessage" id="errorQ5"></p>
       </fieldset>
       <input type="submit" value="SUBMIT" id="submitButton" class="button" />
       <input
