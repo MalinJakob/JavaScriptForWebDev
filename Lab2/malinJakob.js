@@ -20,7 +20,28 @@ const quiz = {
     diggingBurrows: false,
     divingUnderWater: false
   },
-  q5: ['Poaching for ivory', 'habitat loss', 'human-wildlife conflict']
+  q5: [
+    ['poaching', 'ivory'], // Keywords for poaching for ivory
+    ['habitat', 'loss'], // Keywords for habitat loss
+    ['human', 'wildlife', 'conflict'] // Keywords for human-wildlife conflict
+  ]
+}
+
+function checkAnswer (questionId, correctAnswers) {
+  // Convert user's answer to lowercase
+  const userAnswer = document.getElementById(questionId).value
+  const answer = userAnswer.toLowerCase()
+
+  // Check each set of keywords in correctAnswers
+  for (let i = 0; i < correctAnswers.length; i++) {
+    const keywords = correctAnswers[i]
+    // If all keywords in a set are present in the answer, return true
+    if (keywords.every(keyword => answer.includes(keyword))) {
+      return true
+    }
+  }
+
+  return false
 }
 
 // questionId must be same as the name of the input elements we are interested in
@@ -81,6 +102,7 @@ document
     const isQ2Correct = isDictAnswerCorrect('characteristics', quiz.q2)
     const isQ3Correct = isNumberIntervalAnswerCorrect('lifeSpan', quiz.q3)
     const isQ4Correct = isDictAnswerCorrect('coolingOff', quiz.q4)
+    const isQ5Correct = checkAnswer('endangered', quiz.q5)
 
-    console.log(isQ1Correct, isQ2Correct, isQ3Correct, isQ4Correct)
+    console.log(isQ1Correct, isQ2Correct, isQ3Correct, isQ4Correct, isQ5Correct)
   })
