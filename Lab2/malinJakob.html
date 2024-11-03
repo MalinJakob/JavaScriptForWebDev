@@ -1,14 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Malin Jakob" />
-  <meta name="description" content="This page is a quiz with the name Quizzy." />
-  <link rel="stylesheet" href="style.css" />
-  <title>Quizzy</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Malin Jakob" />
+    <meta
+      name="description"
+      content="This page is a quiz with the name Quizzy."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Quizzy</title>
+  </head>
+  <body>
+    <h1>Quizzy</h1>
+
+    <form id="quizForm">
+      <!-- user information -->
+      <fieldset id="userInfo">
+        <legend>Your Details</legend>
+        <label for="firstName">First Name: </label>
+        <input
+          type="text"
+          name="firstName"
+          id="firstName"
+          required
+          placeholder="John"
+          pattern="[A-Za-z]+"
+          title="Only letters are allowed"
+        />
+        <label for="lasttName">Last Name: </label>
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          required
+          placeholder="Doe"
+          pattern="[A-Za-z]+"
+          title="Only letters are allowed"
+        />
+        <label for="email">Email: </label>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          required
+          placeholder="JohnDoe@gmail.com"
+        />
+      </fieldset>
+
+      <h2>Lets start!</h2>
+
+      <!-- Questions -->
+      <fieldset>
+        <legend>Questions</legend>
+        <!-- Question 1 -->
+        <div class="questions">
+          <label for="q1">1. What is the largest species of elephant? </label>
+          <br />
+          <input type="radio" name="largestEl" value="africanForestElephant" />
+          African forest elephant <br />
+          <input type="radio" name="largestEl" value="africanBushElephant" />
+          African bush elephant <br />
+          <input type="radio" name="largestEl" value="asianElephant" /> Asian
+          elephant <br />
+        </div>
+
+        <!-- Question 2 -->
+        <div class="questions">
+          <label for="q2"
+            >2. Which of the following are true characteristics of elephants?
+          </label>
+          <br />
+          <input
+            type="checkbox"
+            name="characteristics"
+            value="keenSenseOfSmell"
+          />
+          Elephants have a keen sense of smell <br />
+          <input type="checkbox" name="characteristics" value="formHerds" />
+          Elephants often form close family groups called herds <br />
+          <input type="checkbox" name="characteristics" value="herbivores" />
+          Elephants are herbivores <br />
+          <input type="checkbox" name="characteristics" value="useTrunks" />
+          Elephants use their trunks for drinking and eating <br />
+        </div>
+
+        <!-- Question 3 -->
+        <div class="questions">
+          <label for="q3"
+            >3. What is the average lifespan of an elephant in the wild?</label
+          ><br />
+          <input
+            type="text"
+            id="lifeSpan"
+            name="lifespan"
+            placeholder="Write your answer here"
+            required
+          />
+        </div>
+
+        <!-- Question 4 -->
+        <div class="questions">
+          <label for="q4"
+            >4. Which of these activities do elephants commonly engage in to
+            cool off?</label
+          ><br />
+          <input type="radio" name="coolingOff" value="climbingTrees" />
+          Climbing trees<br />
+          <input type="radio" name="coolingOff" value="rollingInMud" /> Rolling
+          in mud<br />
+          <input type="radio" name="coolingOff" value="diggingBurrows" />
+          Digging burrows<br />
+          <input type="radio" name="coolingOff" value="divingUnderWater" />
+          Diving underwater<br />
+        </div>
+
+        <!-- Question 5 -->
+        <div class="questions">
+          <label for="q5"
+            >5. Name one primary reason why elephants are endangered</label
+          ><br />
+          <input
+            type="text"
+            id="endangered"
+            name="endangered"
+            placeholder="Write your answer here"
+            required
+          />
+        </div>
+      </fieldset>
+      <input type="submit" value="SUBMIT" id="submitButton" class="button" />
+      <input
+        type="button"
+        value="See Answers"
+        id="answerButton"
+        class="button"
+      />
+    </form>
+  </body>
 </html>
