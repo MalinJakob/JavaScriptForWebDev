@@ -13,13 +13,13 @@ h1, h2{
   letter-spacing: 0.1em;
 }
 
-
 form{
   display: grid;
   justify-self: center;
   width: 70%;
   padding: 1em;
   background: #FFE6A5;
+  margin-bottom: 1em;
 }
 
 fieldset{
@@ -34,10 +34,6 @@ legend{
   font-weight: bold;
 }
 
-label{
-  
-}
-
 .questions{
   background: #FFBF61;
   padding: 1em;
@@ -49,6 +45,11 @@ input{
   padding: 0.5em;
   margin-top: 0.5em;
   border: #FFBF61 solid 2px;
+  margin-top: 1em;
+}
+
+input:focus{
+  background: #8ABFA3;
 }
 
 input[required]{
@@ -63,6 +64,7 @@ input[required]{
   border-color: #8ABFA3;
   color: whitesmoke;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
+  font-weight: bold;
 }
 
 .button:hover{
