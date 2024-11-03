@@ -42,6 +42,18 @@ function isDictAnswerCorrect (questionId, correctAnswers) {
   return true
 }
 
+//questionId must be the id of the html input
+//answer must be an object with two properties, min and max.
+function isNumberIntervalAnswerCorrect (questionId, answer) {
+  const inputElement = document.getElementById(questionId)
+  const userInput = parseInt(inputElement.value)
+
+  if (userInput >= answer.min && userInput <= answer.max) {
+    return true
+  }
+
+  return false
+}
 
 //validate email and name for right format, else display a message
 function validEmail (email) {
@@ -50,25 +62,25 @@ function validEmail (email) {
 }
 
 document
-.getElementById('quizForm')
-.addEventListener('submit', function (event) {
-  event.preventDefault()
-  //get input value from form and remove white space
-  const email = document.getElementById('email').value.trim()
-  const invalidEmailMessage = document.getElementById('invalidEmail')
-  
-  //call the check email function and add message if not valid
-  if (validEmail(email)) {
-    invalidEmailMessage.textContent = ''
-  } else {
-    invalidEmailMessage.textContent = 'Please enter a valid email address!'
-    document.getElementById('email').focus()
-  }
-  
-  const isQ1Correct = isDictAnswerCorrect('largestEl', quiz.q1)
-  const isQ2Correct = isDictAnswerCorrect('characteristics', quiz.q2)
-  const isQ3Correct = false // accept anything between 60 and 70
-  const isQ4Correct = isDictAnswerCorrect('coolingOff', quiz.q4)
-  
-  console.log(isQ1Correct, isQ2Correct, isQ4Correct)
-})
+  .getElementById('quizForm')
+  .addEventListener('submit', function (event) {
+    event.preventDefault()
+    //get input value from form and remove white space
+    const email = document.getElementById('email').value.trim()
+    const invalidEmailMessage = document.getElementById('invalidEmail')
+
+    //call the check email function and add message if not valid
+    if (validEmail(email)) {
+      invalidEmailMessage.textContent = ''
+    } else {
+      invalidEmailMessage.textContent = 'Please enter a valid email address!'
+      document.getElementById('email').focus()
+    }
+
+    const isQ1Correct = isDictAnswerCorrect('largestEl', quiz.q1)
+    const isQ2Correct = isDictAnswerCorrect('characteristics', quiz.q2)
+    const isQ3Correct = isNumberIntervalAnswerCorrect('lifeSpan', quiz.q3)
+    const isQ4Correct = isDictAnswerCorrect('coolingOff', quiz.q4)
+
+    console.log(isQ1Correct, isQ2Correct, isQ3Correct, isQ4Correct)
+  })
