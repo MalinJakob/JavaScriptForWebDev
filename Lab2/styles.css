@@ -60,6 +60,11 @@ input[required]{
   background-repeat: no-repeat;
 }
 
+.required:after {
+  content:" *";
+  color: #605678;
+}
+
 .button{
   background: #8ABFA3;
   border-color: #8ABFA3;
