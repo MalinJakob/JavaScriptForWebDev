@@ -115,6 +115,11 @@ document
       errorMessage.textContent = 'Please answer question 5'
       error = true
     }
+    else{
+      errorMessage.textContent = 'WOOHOO you are done! Lets see how you did!!'
+      messageBox.style.display = 'grid'
+      messageBox.focus()
+    }
     
     if (error) {
       messageBox.style.display = 'grid'
