@@ -84,3 +84,15 @@ input[required]{
 #invalidEmail{
   color: red;
 }
+
+
+.backgroundMessage{
+  text-align: start;
+  background: #605678;
+  display: grid;
+  justify-self: center;
+  width: 70%;
+  padding: 1em;
+  color: white;
+  border-radius: 4px;
+}

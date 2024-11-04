@@ -9,6 +9,7 @@
       content="This page is a quiz with the name Quizzy."
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="/JSForWebDev/Lab2/js/jquery-3.7.1.js"></script>
     <title>Quizzy</title>
   </head>
   <body>
@@ -144,18 +145,29 @@
       />
     </form>
 
-    <div>
-      <p id="isRequired"></p>
-    </div>
+    <section class="backgroundMessage">
+      <div>
+        <p id="isRequired"></p>
+      </div>
 
-    <div class="correctAnswers">
-      <p id="correctQ1"></p>
-      <p id="correctQ2"></p>
-      <p id="correctQ3"></p>
-      <p id="correctQ4"></p>
-      <p id="correctQ5"></p>
-    </div>
-    
+      <div id="correctAnswers">
+        <p id="correctQ1">1.African bush elephant</p>
+        <p id="correctQ2">
+          2. All the boxes:
+          <br />- Elephants have a keen sense of smell <br />
+          - Elephants often form close family groups called herds <br />
+          - Elephants are herbivores <br />- Elephants use their trunks for
+          drinking and eating
+        </p>
+        <p id="correctQ3">3. 60-70 years</p>
+        <p id="correctQ4">4. Rolling in mud</p>
+        <p id="correctQ5"> 5. 
+          Poaching for ivory is a major cause of elephant endangerment, along
+          with habitat loss due to human encroachment and conflict with humans
+          in shared environments.
+        </p>
+      </div>
+    </section>
     <script src="malinJakob.js"></script>
   </body>
 </html>

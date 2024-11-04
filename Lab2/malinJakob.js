@@ -27,6 +27,8 @@ const quiz = {
   ]
 }
 
+
+
 function checkAnswer (questionId, correctAnswers) {
   // Convert user's answer to lowercase
   const userAnswer = document.getElementById(questionId).value
@@ -108,3 +110,13 @@ document
 
     console.log(isQ1Correct, isQ2Correct, isQ3Correct, isQ4Correct, isQ5Correct)
   })
+
+  window.addEventListener('DOMContentLoaded', function(){
+    const messageBox = document.querySelector('.backgroundMessage')
+    const correctAnswers = document.getElementById('correctAnswers')
+    correctAnswers.style.display = 'none'
+    messageBox.style.display = 'none'
+    
+  })
+
+
