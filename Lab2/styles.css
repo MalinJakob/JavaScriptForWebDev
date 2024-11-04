@@ -40,6 +40,7 @@ legend{
   font-weight: bold;
 }
 
+
 .questions{
   background: #FFBF61;
   padding: 1em;
@@ -59,16 +60,11 @@ input:focus{
   background: #8ABFA3;
 }
 
-input[required]{
+.required{
   background-image: url(image/icons-asterisk.png) ;
   background-size: 0.7em 0.7em;
   background-position: right top;
   background-repeat: no-repeat;
-}
-
-.required:after {
-  content:" *";
-  color: #605678;
 }
 
 .button{

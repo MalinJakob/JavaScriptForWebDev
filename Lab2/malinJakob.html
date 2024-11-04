@@ -18,24 +18,27 @@
       <!-- user information -->
       <fieldset id="userInfo">
         <legend>Your Details</legend>
-        <label class="required" for="firstName">First Name: </label>
+        <label for="firstName">First Name: </label>
         <input
-        type="text"
-        name="firstName"
-        id="firstName"
-        placeholder="John"
+          class="required"
+          type="text"
+          name="firstName"
+          id="firstName"
+          placeholder="John"
         />
         <p id="invalidFirstName"></p>
-        <label class="required" for="lasttName">Last Name: </label>
+        <label for="lasttName">Last Name: </label>
         <input
+          class="required"
           type="text"
           name="lastName"
           id="lastName"
           placeholder="Doe"
         />
         <p id="invalidLastName"></p>
-        <label class="required" for="email">Email: </label>
+        <label for="email">Email: </label>
         <input
+          class="required"
           type="text"
           name="email"
           id="email"
@@ -80,21 +83,20 @@
           Elephants are herbivores <br />
           <input type="checkbox" name="characteristics" value="useTrunks" />
           Elephants use their trunks for drinking and eating <br />
-          <p class="errorMessage" id="errorQ2"></p>
         </div>
 
         <!-- Question 3 -->
         <div class="questions">
-          <label class="required" for="q3"
+          <label for="q3"
             >3. What is the average lifespan of an elephant in the wild?</label
           ><br />
           <input
-          type="number"
-          id="lifeSpan"
-          name="lifespan"
-          placeholder="Write your answer here"
+            class="required"
+            type="number"
+            id="lifeSpan"
+            name="lifespan"
+            placeholder="Write your answer here"
           />
-          <p class="errorMessage" id="errorQ3"></p>
         </div>
 
         <!-- Question 4 -->
@@ -111,21 +113,20 @@
           Digging burrows<br />
           <input type="radio" name="coolingOff" value="divingUnderWater" />
           Diving underwater<br />
-          <p class="errorMessage" id="errorQ4"></p>
         </div>
 
         <!-- Question 5 -->
         <div class="questions">
-          <label class="required" for="q5"
+          <label for="q5"
             >5. Name one primary reason why elephants are endangered</label
           ><br />
           <input
+            class="required"
             type="text"
             id="endangered"
             name="endangered"
             placeholder="Write your answer here"
           />
-          <p class="errorMessage" id="errorQ5"></p>
         </div>
       </fieldset>
       <input type="submit" value="SUBMIT" id="submitButton" class="button" />
@@ -144,7 +145,7 @@
       </div>
 
       <div id="correctAnswers">
-        <h3 >Correct Answers;</h3>
+        <h3>Correct Answers;</h3>
         <p id="correctQ1">1. African bush elephant</p>
         <p id="correctQ2">
           2. All the boxes are true:
@@ -155,8 +156,8 @@
         </p>
         <p id="correctQ3">3. 60-70 years</p>
         <p id="correctQ4">4. Rolling in mud</p>
-        <p id="correctQ5"> 5. 
-          Poaching for ivory is a major cause of elephant endangerment, along
+        <p id="correctQ5">
+          5. Poaching for ivory is a major cause of elephant endangerment, along
           with habitat loss due to human encroachment and conflict with humans
           in shared environments.
         </p>

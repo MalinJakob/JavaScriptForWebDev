@@ -182,8 +182,6 @@ document
 
     result.textContent = `Your total score is:  ${totalScore} / 5`
     messageBox.focus()
-
-    console.log(isQ1Correct, isQ2Correct, isQ3Correct, isQ4Correct, isQ5Correct)
   })
 
 const messageBox = document.querySelector('.backgroundMessage')
@@ -196,21 +194,4 @@ window.addEventListener('DOMContentLoaded', function () {
   seeAnswerButton.style.display = 'none'
   correctAnswers.style.display = 'none'
   messageBox.style.display = 'none'
-})
-
-const inputValueQ3 = document.getElementById('lifeSpan')
-const inputValueQ5 = document.getElementById('endangered')
-
-//remove message if the required questions are answered
-inputValueQ3.addEventListener('input', function () {
-  if (inputValueQ3.value) {
-    errorMessage.textContent = ''
-    totalScore.textContent = ''
-  }
-})
-inputValueQ5.addEventListener('input', function () {
-  if (inputValueQ5.value) {
-    errorMessage.textContent = ''
-    totalScore.textContent = ''
-  }
 })
