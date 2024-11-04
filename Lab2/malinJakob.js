@@ -113,6 +113,7 @@ document
 
     let error = false
 
+    //check if fisrt/lastname only have letters and add message if not valid
     if (!validNames(firstName)) {
       invalidFirstNameMessage.textContent = 'Only letters are allowed'
       document.getElementById('firstName').focus()
@@ -125,7 +126,7 @@ document
       return
     }
 
-    //call the check email function and add message if not valid
+    //check if email is valid and add message if not valid
     if (!validEmail(email)) {
       invalidEmailMessage.textContent = 'Please enter a valid email address!'
       document.getElementById('email').focus()
@@ -171,6 +172,7 @@ document
     const isQ4Correct = isDictAnswerCorrect('coolingOff', quiz.q4)
     const isQ5Correct = checkAnswer('endangered', quiz.q5)
     
+    //calculate the total correct answer and display to usr
     let totalScore = 0
     totalScore += isQ1Correct ? 1 : 0
     totalScore += isQ2Correct ? 1 : 0
