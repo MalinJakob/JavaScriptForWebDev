@@ -101,6 +101,18 @@ document
       invalidEmailMessage.textContent = 'Please enter a valid email address!'
       document.getElementById('email').focus()
     }
+    
+    //when submit is done the button for See Answers are shown to the user
+    seeAnswerButton.style.display = 'grid'
+
+    //if submission is done, the user can now click to se the answers
+    document.getElementById('answerButton').addEventListener('click' , function(){
+      if(correctAnswers){
+        correctAnswers.style.display = 'grid'
+        messageBox.style.display = 'grid'
+        messageBox.focus()
+      }
+    })
 
     const isQ1Correct = isDictAnswerCorrect('largestEl', quiz.q1)
     const isQ2Correct = isDictAnswerCorrect('characteristics', quiz.q2)
@@ -110,13 +122,18 @@ document
 
     console.log(isQ1Correct, isQ2Correct, isQ3Correct, isQ4Correct, isQ5Correct)
   })
+  
+  const messageBox = document.querySelector('.backgroundMessage')
+  const correctAnswers = document.getElementById('correctAnswers')
+  const seeAnswerButton = document.getElementById('answerButton')
+  messageBox.setAttribute('tabindex', '-1')
 
+  //hide message box and correct answer when the content is fully loaded 
   window.addEventListener('DOMContentLoaded', function(){
-    const messageBox = document.querySelector('.backgroundMessage')
-    const correctAnswers = document.getElementById('correctAnswers')
+    seeAnswerButton.style.display = 'none'
     correctAnswers.style.display = 'none'
     messageBox.style.display = 'none'
-    
   })
+
 
 

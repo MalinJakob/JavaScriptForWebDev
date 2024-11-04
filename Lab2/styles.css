@@ -13,6 +13,11 @@ h1, h2{
   letter-spacing: 0.1em;
 }
 
+h3{
+  margin-bottom: 0.5em;
+  letter-spacing: 0.1em;
+}
+
 form{
   display: grid;
   justify-self: center;
@@ -89,10 +94,16 @@ input[required]{
 .backgroundMessage{
   text-align: start;
   background: #605678;
-  display: grid;
+  display: none;
   justify-self: center;
   width: 70%;
   padding: 1em;
   color: white;
   border-radius: 4px;
 }
+
+#correctAnswers{
+  display: none;
+}
+
+
