@@ -40,6 +40,7 @@ function checkAnswer (questionId, correctAnswers) {
       return true
     }
   }
+
   return false
 }
 
@@ -84,10 +85,9 @@ function validEmail (email) {
 }
 
 //check if the input for name is only letters
-function validNames(name){
-  const namePattern = (/^[A-Za-z]+$/) 
+function validNames (name) {
+  const namePattern = /^[A-Za-z]+$/
   return namePattern.test(name)
-  
 }
 
 document
@@ -96,7 +96,7 @@ document
     event.preventDefault()
 
     //get input values from form
-    //remove white space from email input 
+    //remove white space from email input
     const email = document.getElementById('email').value.trim()
     const firstName = document.getElementById('firstName').value
     const lastName = document.getElementById('lastName').value
@@ -106,20 +106,20 @@ document
     const inputValueQ3 = document.getElementById('lifeSpan')
     const inputValueQ5 = document.getElementById('endangered')
     const errorMessage = document.getElementById('errorMessage')
-    
+
     invalidFirstNameMessage.textContent = ''
     invalidLastNameMessage.textContent = ''
     invalidEmailMessage.textContent = ''
 
     let error = false
 
-    if(!validNames(firstName)){
+    if (!validNames(firstName)) {
       invalidFirstNameMessage.textContent = 'Only letters are allowed'
       document.getElementById('firstName').focus()
       return
     }
 
-    if(!validNames(lastName)){
+    if (!validNames(lastName)) {
       invalidLastNameMessage.textContent = 'Only letters are allowed'
       document.getElementById('lastName').focus()
       return
@@ -131,7 +131,7 @@ document
       document.getElementById('email').focus()
       return
     }
-    
+
     //check if the user entered input in required questions
     if (!inputValueQ3.value) {
       errorMessage.textContent = 'Please answer question 3'
@@ -139,36 +139,47 @@ document
     } else if (!inputValueQ5.value) {
       errorMessage.textContent = 'Please answer question 5'
       error = true
-    }
-    else{
+    } else {
       errorMessage.textContent = 'WOOHOO you are done! Lets see how you did!!'
       messageBox.style.display = 'grid'
       messageBox.focus()
     }
-    
+
     if (error) {
       messageBox.style.display = 'grid'
       messageBox.focus()
       return
     }
-    
+
     //when submit is done the button for See Answers are shown to the user
     seeAnswerButton.style.display = 'grid'
-    
+
     //if submission is done, the user can now click to se the answers
     seeAnswerButton.addEventListener('click', function () {
-        if (correctAnswers) {
-          correctAnswers.style.display = 'grid'
-          messageBox.style.display = 'grid'
-          messageBox.focus()
-        }
-      })
-      
+      if (correctAnswers) {
+        correctAnswers.style.display = 'grid'
+        messageBox.style.display = 'grid'
+        messageBox.focus()
+      }
+    })
+
+    
+    const result = document.getElementById('totalScore')
     const isQ1Correct = isDictAnswerCorrect('largestEl', quiz.q1)
     const isQ2Correct = isDictAnswerCorrect('characteristics', quiz.q2)
     const isQ3Correct = isNumberIntervalAnswerCorrect('lifeSpan', quiz.q3)
     const isQ4Correct = isDictAnswerCorrect('coolingOff', quiz.q4)
     const isQ5Correct = checkAnswer('endangered', quiz.q5)
+    
+    let totalScore = 0
+    totalScore += isQ1Correct ? 1 : 0
+    totalScore += isQ2Correct ? 1 : 0
+    totalScore += isQ3Correct ? 1 : 0
+    totalScore += isQ4Correct ? 1 : 0
+    totalScore += isQ5Correct ? 1 : 0
+
+    result.textContent = `Your total score is:  ${totalScore} / 5`
+    messageBox.focus()
 
     console.log(isQ1Correct, isQ2Correct, isQ3Correct, isQ4Correct, isQ5Correct)
   })
@@ -192,10 +203,12 @@ const inputValueQ5 = document.getElementById('endangered')
 inputValueQ3.addEventListener('input', function () {
   if (inputValueQ3.value) {
     errorMessage.textContent = ''
+    totalScore.textContent = ''
   }
 })
 inputValueQ5.addEventListener('input', function () {
   if (inputValueQ5.value) {
     errorMessage.textContent = ''
+    totalScore.textContent = ''
   }
 })

@@ -9,7 +9,6 @@
       content="This page is a quiz with the name Quizzy."
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="/JSForWebDev/Lab2/js/jquery-3.7.1.js"></script>
     <title>Quizzy</title>
   </head>
   <body>
@@ -140,14 +139,15 @@
 
     <section class="backgroundMessage">
       <div>
-        <h3 id="errorMessage"></h3>
+        <h3 id="errorMessage" class="successMessage"></h3>
+        <h3 id="totalScore"></h3>
       </div>
 
       <div id="correctAnswers">
-        <h3>Correct Answers;</h3>
-        <p id="correctQ1">1.African bush elephant</p>
+        <h3 >Correct Answers;</h3>
+        <p id="correctQ1">1. African bush elephant</p>
         <p id="correctQ2">
-          2. All the boxes:
+          2. All the boxes are true:
           <br />- Elephants have a keen sense of smell <br />
           - Elephants often form close family groups called herds <br />
           - Elephants are herbivores <br />- Elephants use their trunks for

@@ -52,6 +52,7 @@ input{
   margin-top: 0.5em;
   border: #FFBF61 solid 2px;
   margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
 input:focus{
@@ -115,7 +116,16 @@ input[required]{
 
 #correctAnswers{
   display: none;
+  border: #8ABFA3 dashed 2px;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 1em;
 }
 
+#correctAnswers h3{
+  color: #8ABFA3;
+}
 
-
+.successMessage{
+  color: #FFBF61;
+}
