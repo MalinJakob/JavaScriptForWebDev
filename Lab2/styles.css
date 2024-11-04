@@ -125,3 +125,8 @@ input:focus{
 .successMessage{
   color: #FFBF61;
 }
+
+.rightAnswer{
+  margin-left: 1.5em;
+  line-height: 1.3;
+}
