@@ -88,6 +88,17 @@ input[required]{
 
 #invalidEmail{
   color: red;
+  text-align: end;
+}
+
+#invalidFirstName{
+  color: red;
+  text-align: end;
+}
+
+#invalidLastName{
+  color: red;
+  text-align: end;
 }
 
 
@@ -105,5 +116,6 @@ input[required]{
 #correctAnswers{
   display: none;
 }
+
 
 

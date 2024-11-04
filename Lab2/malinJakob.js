@@ -40,7 +40,6 @@ function checkAnswer (questionId, correctAnswers) {
       return true
     }
   }
-
   return false
 }
 
@@ -84,6 +83,13 @@ function validEmail (email) {
   return emailPattern.test(email)
 }
 
+//check if the input for name is only letters
+function validNames(name){
+  const namePattern = (/^[A-Za-z]+$/) 
+  return namePattern.test(name)
+  
+}
+
 document
   .getElementById('quizForm')
   .addEventListener('submit', function (event) {
@@ -92,19 +98,38 @@ document
     //get input values from form
     //remove white space from email input 
     const email = document.getElementById('email').value.trim()
+    const firstName = document.getElementById('firstName').value
+    const lastName = document.getElementById('lastName').value
+    const invalidFirstNameMessage = document.getElementById('invalidFirstName')
+    const invalidLastNameMessage = document.getElementById('invalidLastName')
     const invalidEmailMessage = document.getElementById('invalidEmail')
     const inputValueQ3 = document.getElementById('lifeSpan')
     const inputValueQ5 = document.getElementById('endangered')
     const errorMessage = document.getElementById('errorMessage')
     
+    invalidFirstNameMessage.textContent = ''
+    invalidLastNameMessage.textContent = ''
+    invalidEmailMessage.textContent = ''
+
     let error = false
 
+    if(!validNames(firstName)){
+      invalidFirstNameMessage.textContent = 'Only letters are allowed'
+      document.getElementById('firstName').focus()
+      return
+    }
+
+    if(!validNames(lastName)){
+      invalidLastNameMessage.textContent = 'Only letters are allowed'
+      document.getElementById('lastName').focus()
+      return
+    }
+
     //call the check email function and add message if not valid
-    if (validEmail(email)) {
-      invalidEmailMessage.textContent = ''
-    } else {
+    if (!validEmail(email)) {
       invalidEmailMessage.textContent = 'Please enter a valid email address!'
       document.getElementById('email').focus()
+      return
     }
     
     //check if the user entered input in required questions

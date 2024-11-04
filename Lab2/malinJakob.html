@@ -19,32 +19,27 @@
       <!-- user information -->
       <fieldset id="userInfo">
         <legend>Your Details</legend>
-        <label for="firstName">First Name: </label>
+        <label class="required" for="firstName">First Name: </label>
         <input
-          type="text"
-          name="firstName"
-          id="firstName"
-          required
-          placeholder="John"
-          pattern="[A-Za-z]+"
-          title="Only letters are allowed"
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="John"
         />
-        <label for="lasttName">Last Name: </label>
+        <p id="invalidFirstName"></p>
+        <label class="required" for="lasttName">Last Name: </label>
         <input
           type="text"
           name="lastName"
           id="lastName"
-          required
           placeholder="Doe"
-          pattern="[A-Za-z]+"
-          title="Only letters are allowed"
         />
-        <label for="email">Email: </label>
+        <p id="invalidLastName"></p>
+        <label class="required" for="email">Email: </label>
         <input
           type="text"
           name="email"
           id="email"
-          required
           placeholder="JohnDoe@gmail.com"
         />
         <p id="invalidEmail"></p>
@@ -65,8 +60,8 @@
           African bush elephant <br />
           <input type="radio" name="largestEl" value="asianElephant" /> Asian
           elephant <br />
+          <p class="errorMessage" id="errorQ1"></p>
         </div>
-        <p class="errorMessage" id="errorQ1"></p>
 
         <!-- Question 2 -->
         <div class="questions">
@@ -86,8 +81,8 @@
           Elephants are herbivores <br />
           <input type="checkbox" name="characteristics" value="useTrunks" />
           Elephants use their trunks for drinking and eating <br />
+          <p class="errorMessage" id="errorQ2"></p>
         </div>
-        <p class="errorMessage" id="errorQ2"></p>
 
         <!-- Question 3 -->
         <div class="questions">
@@ -100,6 +95,7 @@
           name="lifespan"
           placeholder="Write your answer here"
           />
+          <p class="errorMessage" id="errorQ3"></p>
         </div>
 
         <!-- Question 4 -->
@@ -116,6 +112,7 @@
           Digging burrows<br />
           <input type="radio" name="coolingOff" value="divingUnderWater" />
           Diving underwater<br />
+          <p class="errorMessage" id="errorQ4"></p>
         </div>
 
         <!-- Question 5 -->
@@ -129,8 +126,8 @@
             name="endangered"
             placeholder="Write your answer here"
           />
+          <p class="errorMessage" id="errorQ5"></p>
         </div>
-        <p class="errorMessage" id="errorQ5"></p>
       </fieldset>
       <input type="submit" value="SUBMIT" id="submitButton" class="button" />
       <input
@@ -143,7 +140,7 @@
 
     <section class="backgroundMessage">
       <div>
-        <p id="errorMessage"></p>
+        <h3 id="errorMessage"></h3>
       </div>
 
       <div id="correctAnswers">
