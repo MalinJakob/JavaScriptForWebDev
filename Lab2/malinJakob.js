@@ -35,7 +35,8 @@ function checkAnswer (questionId, correctAnswers) {
   // Check each set of keywords in correctAnswers
   for (let i = 0; i < correctAnswers.length; i++) {
     const keywords = correctAnswers[i]
-    // If all keywords in a set are present in the answer, return true
+    //goes through each option list
+    // If all keywords in a option list are present in the answer, return true
     if (keywords.every(keyword => answer.includes(keyword))) {
       return true
     }
@@ -55,10 +56,10 @@ function isDictAnswerCorrect (questionId, answerOptions) {
 
   for (let i = 0; i < userAnswers.length; i++) {
     const optionName = userAnswers[i].value
-    const userAnswer = userAnswers[i].checked
+    const selectedOption = userAnswers[i].checked
     const correctAnswer = answerOptions[optionName]
 
-    if (userAnswer !== correctAnswer) {
+    if (selectedOption !== correctAnswer) {
       return false
     }
   }
