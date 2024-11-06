@@ -49,14 +49,14 @@ function checkAnswer (questionId, correctAnswers) {
 // correctAnswers must always be a object rather than a list
 function isDictAnswerCorrect (questionId, answerOptions) {
   //get input elements for this question, both unchecked and checked
-  const userAnswers = document.querySelectorAll(`input[name=${questionId}]`)
-  if (!userAnswers) {
+  const optionElements = document.querySelectorAll(`input[name=${questionId}]`)
+  if (!optionElements) {
     return false
   }
 
-  for (let i = 0; i < userAnswers.length; i++) {
-    const optionName = userAnswers[i].value
-    const selectedOption = userAnswers[i].checked
+  for (let i = 0; i < optionElements.length; i++) {
+    const optionName = optionElements[i].value
+    const selectedOption = optionElements[i].checked
     const correctAnswer = answerOptions[optionName]
 
     if (selectedOption !== correctAnswer) {
