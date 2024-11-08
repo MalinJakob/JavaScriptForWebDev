@@ -60,12 +60,11 @@ input:focus{
   background: #8ABFA3;
 }
 
-.required{
-  background-image: url(image/icons-asterisk.png) ;
-  background-size: 0.7em 0.7em;
-  background-position: right top;
-  background-repeat: no-repeat;
-}
+
+.mandatory:after { 
+  content:" *";
+  color: red;
+ }
 
 .button{
   background: #8ABFA3;

@@ -104,6 +104,9 @@ document
     const invalidFirstNameMessage = document.getElementById('invalidFirstName')
     const invalidLastNameMessage = document.getElementById('invalidLastName')
     const invalidEmailMessage = document.getElementById('invalidEmail')
+    const inputValueQ2 = document.querySelectorAll(
+      `input[name=characteristics]`
+    )
     const inputValueQ3 = document.getElementById('lifeSpan')
     const inputValueQ5 = document.getElementById('endangered')
     const errorMessage = document.getElementById('errorMessage')
@@ -133,14 +136,27 @@ document
       document.getElementById('email').focus()
       return
     }
-
+    
+    //go through option elements and check if they are boxed, if at least one is boxed, break
+    let answerExist = false
+    for (let i = 0; i < inputValueQ2.length; i++) {
+      if (inputValueQ2[i].checked) {
+        answerExist = true
+        break
+      }
+    }
+    
     //check if the user entered input in required questions
-    if (!inputValueQ3.value) {
+    if (!answerExist) {
+      errorMessage.textContent = 'Please answer question 2'
+      error = true
+    } else if (!inputValueQ3.value) {
       errorMessage.textContent = 'Please answer question 3'
       error = true
     } else if (!inputValueQ5.value) {
       errorMessage.textContent = 'Please answer question 5'
       error = true
+      //add required for question 2
     } else {
       errorMessage.textContent = 'WOOHOO you are done! Lets see how you did!!'
       messageBox.style.display = 'grid'
@@ -165,14 +181,13 @@ document
       }
     })
 
-    
     const result = document.getElementById('totalScore')
     const isQ1Correct = isDictAnswerCorrect('largestEl', quiz.q1)
     const isQ2Correct = isDictAnswerCorrect('characteristics', quiz.q2)
     const isQ3Correct = isNumberIntervalAnswerCorrect('lifeSpan', quiz.q3)
     const isQ4Correct = isDictAnswerCorrect('coolingOff', quiz.q4)
     const isQ5Correct = checkAnswer('endangered', quiz.q5)
-    
+
     //calculate the total correct answer and display to usr
     let totalScore = 0
     totalScore += isQ1Correct ? 1 : 0
